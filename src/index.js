@@ -1,8 +1,12 @@
-const app = require('./app');
+const morgan = require ('morgan');
+const express = require('express');
+const app = express();
+require('./db')
+//routers
+const user = require ('./routes/user');
 
-async function main(){
-  await app.listen(3000);
-  console.log('server is running')
-}
+app.use("/",user);
 
-main();
+app.listen(process.env.PORT || 3000, () => {
+    console.log("Server is running...");
+});

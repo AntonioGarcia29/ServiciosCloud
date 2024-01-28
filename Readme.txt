@@ -1,6 +1,6 @@
 La imagen creada se llama node-restapi
 
-Para construir la imagen "docker build -t node-restapi:18 ."
+Para construir la imagen "docker build -t node-restapi0.1:18 ."
 
 El comando para ejecutar viendo la consola es  "docker run -it -p3000:3000 --name rest node-restapi" 
 
